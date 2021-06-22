@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Label</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <div class="container page__container">
+        <section class="search page__sections">
+            <div class="search-input">
+                <input type="text" name="s1" id="search" class="form-control search-input__box" onkeyup="search()" placeholder="Search all labels">
+                <span class="search-input__icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <div class="new-label-btn">
+                <button class="btn btn-success" type="button" onclick="openDialog()">New Label</button>
+            </div>
+        </section>
+        <section class="label-creation page__sections">
+            <div class="preview-text">
+                <span class="preview-text_size" id="preview">Label preview1</span>
+            </div>
+            <form class="form-element" id="formGroup">
+                <div class="form-group">
+                    <label for="labelInput">Label Name</label>
+                    <input type="text" id="labelInput" class="form-control label-input" onkeyup="showValue(this)" placeholder="Label Name">
+                </div>
+                <div class="color-group form-group">
+                    <label for="colorInput">Color</label>
+                    <div class="block-element">
+                        <button class="btn" id="colorBtn" type="button" onclick='changeColor(this);'><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                        <input type="text" id="colorInput" class="form-control color-input" readonly>
+                    </div>
+                </div>
+                <div class="save-btn-group">
+                    <button class="btn btn-light save-btn-group_theme" type="button" onclick="clearData();">Cancel</button>
+                    <button class="btn btn-success" id="createLabelBtn" type="button" onclick="saveData();">Create Label</button>
+                </div>
+            </form>
+        </section>
+        <section class="label-records page__sections">
+            <!-- <header class="record-header">
+                
+                <div class="sort-block">
+                    <h3><span>9</span><span>Labels</span></h3>
+                    <span>Sort</span>
+                </div>
+            </header> -->
+            <table class="table" id="tableData">
+                <thead>
+                    <tr>
+                        <th><h3><span class="rowCount">0</span><span>Labels</span></h3></th>
+                        <th><span>Color</span></th>
+                        <th>edit</th>
+                        <th>Update</th>
+                   </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+            <!-- <div class="list-row">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span>Bug</span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="discription">
+                            <span>Something isn't working</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="update-btn-group">
+                            <button class="update-btn-group__link">Edit</buton>
+                            <button class="update-btn-group__link">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

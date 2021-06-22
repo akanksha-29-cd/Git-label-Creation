@@ -1,0 +1,26 @@
+.search{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 0.625rem 0.9375rem;
+    @media screen and (min-width: 768px){
+        flex-flow: row wrap;
+    }
+    .search-input{
+        position: relative;
+        margin-bottom: 0.625rem;
+        @media screen and (min-width: 768px){
+            margin-bottom: 0;
+        }
+        &__box{
+            padding: .375rem .75rem .375rem 2rem;
+        }
+        &__icon{
+            position: absolute;
+            top: 8px;
+            left: 9px;
+            color: $grey-1;
+            pointer-events: none;
+        }
+    }
+}
