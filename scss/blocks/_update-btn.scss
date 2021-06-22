@@ -1,0 +1,19 @@
+.update-btn-group{
+    display: flex;
+    justify-content: flex-end;
+    &__link{
+        margin-right: 0.625rem;
+        outline: none;
+        border: 0;
+        font-size:	0.875rem;
+        background-color: $white;
+        cursor: pointer;
+        &:hover{
+            color: $blue;
+            text-decoration: underline;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

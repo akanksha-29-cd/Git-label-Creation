@@ -1,0 +1,14 @@
+.form-element{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0;
+}
+label{
+    font-size: 	0.875rem;
+    font-weight: 600;
+}
+.form-control_size{
+    width: 200px;
+}

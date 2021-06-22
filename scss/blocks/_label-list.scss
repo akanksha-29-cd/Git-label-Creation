@@ -1,0 +1,14 @@
+.label-records{
+    border: 1px solid $white-0;
+    border-radius: 6px;
+}
+.record-header{
+    display: flex;
+    background-color: $white-1;
+    padding: 0.625rem 0.9375rem;
+    justify-content: space-between;
+}
+.list-row{
+    padding: 0.9375rem 0.9375rem;
+    border-top: 1px solid $white-2;
+}
