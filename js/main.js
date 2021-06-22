@@ -57,11 +57,13 @@ function openDialog(){
 function saveData(){
     changeState();
     let tr =  document.createElement('tr');
-    let td1 = tr.appendChild(document.createElement('td')); 
+    let td1 = tr.appendChild(document.createElement('td'));
     let td2 = tr.appendChild(document.createElement('td')); 
     let td3 = tr.appendChild(document.createElement('td')); 
     let td4 = tr.appendChild(document.createElement('td')); 
     td1.innerHTML= inputValue.value;
+    td1.classList.add("td-theming");
+    td1.style.background = colorLable.value + '';
     td2.innerHTML = colorLable.value;
     td3.innerHTML = '<button class="update-btn-group__link" type="button" onclick="updateRow(this)">Edit</buton>';
     td4.innerHTML = '<button class="update-btn-group__link" type="button" onclick="deleteRow(this)">Delete</button>';
